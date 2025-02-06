@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPhone Zone - Все об iPhone</title>
     <style>
-        /* Общие стили */
+        /* Общие стили (из предыдущего примера) */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
@@ -99,11 +99,45 @@
         .content-section.active {
             display: block;
         }
+
+        /* Стили для поиска */
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #search-input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 60%;
+            max-width: 300px;
+        }
+
+        #search-button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #search-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>iPhone Zone</h1>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Поиск...">
+            <button id="search-button">Найти</button>
+        </div>
+
         <p>Все, что вам нужно знать об iPhone в одном месте!</p>
 
         <img src="apple-iphone-14-plus-purple-1-1000x1000.jpg" alt="iPhone 15 Pro" class="iphone-image">
@@ -162,6 +196,32 @@
                 const targetId = button.dataset.target;
                 document.getElementById(targetId).classList.add('active');
             });
+        });
+
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchInput.value;
+            if (searchTerm) {
+                window.location.href = https://www.google.com/search?q=${searchTerm} site:apple.com/iphone;
+            }
+        });
+
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+    </script>
+window.location.href = `https://www.google.com/search?q=${searchTerm} site:apple.com/iphone`;
+            }
+        });
+
+        searchInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                searchButton.click();
+            }
         });
     </script>
 </body>
