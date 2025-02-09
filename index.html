@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продажа айфонов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">  <!-- Фавикон сайта -->
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="apple.png" alt="Логотип магазина">
+        </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+        <div class="search">  <!-- Добавляем поле поиска -->
+            <input type="text" id="search-input" placeholder="Поиск...">
+            <button id="search-button">Найти</button>
+        </div>
+        <div class="cart">
+            <a href="cart.html">
+                <img src="corzina.jpg" alt="Корзина">
+                <span id="cart-count">Корзина (0)</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+    <section id="hero">
+        <div class="container">
+            <h1 style="color: rgb(0, 0, 0);">Продажа айфонов по лучшей цене!</h1>
+            
+            <a href="catalog.html" class="button">Смотреть каталог</a>
+        </div>
+    </section>
+
+<!-- В секцию "featured-products" добавьте элементы для фильтров и сортировки -->
+<section id="featured-products">
+    <div class="container">
+        <h2>Популярные товары</h2>
+        <div class="filters">
+            <label for="category-filter">Категория:</label>
+            <select id="category-filter">
+                <option value="all">Все</option>
+                <option value="iphone">Айфоны</option>
+                <option value="iphone">Чехлы</option>
+                <option value="iphone">Защитные стекла</option>
+            </select>
+            <label for="sort-by">Сортировать по:</label>
+            <select id="sort-by">
+                <option value="price-asc">Цене (возрастание)</option>
+                <option value="price-desc">Цене (убывание)</option>
+                <option value="name-asc">Названию (A-Я)</option>
+            </select>
+        </div>
+        <div class="products-grid">
+            <!-- Сюда будут добавлены товары (динамически через JavaScript) -->
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Наш магазин. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

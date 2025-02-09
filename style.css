@@ -1,0 +1,199 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #2c2c2c;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav a {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+header .cart a {
+    display: flex;
+    align-items: center;
+}
+
+header .cart img {
+    height: 25px;
+    margin-right: 5px;
+}
+
+/* Секция "Hero" */
+#hero {
+    background-color: #eee;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero .button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Секция "Популярные товары" */
+#featured-products {
+    padding: 50px 0;
+}
+
+#featured-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#featured-products .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 20px;
+}
+
+/* Стили для карточки товара (будут добавлены динамически) */
+.product-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Подвал сайта */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Для экранов меньше 768px (мобильные устройства) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    header nav a {
+        margin: 0 10px;
+    }
+
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #featured-products .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-card img {
+    max-width: 100%; /* Изображение не должно быть шире контейнера */
+    width: 200px; /* Задайте желаемую ширину */
+    height: auto; /* Сохраняем пропорции */
+    margin-bottom: 10px;
+}
+#hero {
+    background-image: url("phon.jpg");
+    background-size: cover;
+    background-position: top center; /* Показываем верхнюю часть изображения */
+    background-repeat: no-repeat;
+    padding: 90px 0;
+    text-align: center;
+}
+#hero h1 {
+    position: relative;
+    top: -150px; /* Замените на желаемое значение (отрицательное значение поднимает элемент) */
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+#hero a {
+    position: relative;
+    top: 168px; /* Замените на желаемое значение (отрицательное значение поднимает элемент) */
+    color: white;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+

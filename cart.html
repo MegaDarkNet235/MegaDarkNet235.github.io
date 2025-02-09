@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="apple.png" alt="Логотип магазина">
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+            </nav>
+            <div class="cart">
+                <a href="cart.html">
+                    <img src="corzina.jpg" alt="Корзина">
+                    <span id="cart-count">Корзина (0)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="cart">
+        <div class="container">
+            <h2>Корзина</h2>
+            <div id="cart-items">
+                <!-- Сюда будут добавлены товары из корзины -->
+            </div>
+            <p id="cart-total">Итого: 0 руб.</p>
+            <button>Оформить заказ</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Название вашего магазина. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>
